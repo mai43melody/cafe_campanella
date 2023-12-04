@@ -1,0 +1,591 @@
+@charset "utf-8";
+
+img {
+    width: 100%;
+    height: 100%;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    background-color: #F7EDE7;
+    color: #3F0F23;
+    font-family: 'Zen Maru Gothic', serif;
+}
+
+.macaronImage {
+    width: 6%;
+    height: auto;
+    margin: 6rem auto 0;
+}
+
+h2 {
+    font-family: 'Zen Maru Gothic', serif;
+    font-size: 4rem;
+    text-align: center;
+    text-shadow: 0px 4px 2px rgba(63, 15, 35, 0.25);
+}
+
+.fadeIn{
+    animation-name: fadeIn;
+    /* animation-delay: 0.5s; */
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+    transform: translateY(80px);
+    opacity: 0;
+}
+
+@keyframes fadeIn{
+    0% {
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* --------------------ここからheader---------------------- */
+
+header {
+    width: 100%;
+    background-color: #EDCCBC;
+}
+
+.headerWrap {
+    width: 100%;
+    height: 12vh;
+    padding: 0 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.headerWrap .headerBox {
+    display: flex;
+    align-items: center;
+}
+
+.headerBox div {
+    width: 75px;
+}
+
+.headerBox h1 {
+    font-size: clamp(24px, 4vw, 56px);
+    font-weight: 600;
+    color: #F45998;
+}
+
+.headerWrap nav ul {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.headerWrap nav ul li {
+    font-size: clamp(16px, 20px, 32px);
+    justify-content: space-between;
+    white-space: nowrap;
+}
+
+/* ------------------header end---------------------- */
+
+.top {
+    width: 100%;
+    height: auto;
+    position: relative;
+}
+
+.wave1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100%;
+    aspect-ratio: 17.5 / 1;
+    background-image: url(../image/SVG/header_underwave.svg);
+    background-size: 100%;
+    background-repeat: repeat-x;
+    background-position: 0;
+    animation: wave-anim 60s linear infinite;
+}
+
+@keyframes wave-anim {
+    from{
+        background-position: 0;
+    }
+    to{
+        background-position: 300vw;
+    }
+}
+
+.wave1 img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: auto;
+}
+
+.topImage {
+    width: 100%;
+    height: 100% - 12vh;
+    z-index: 1;
+}
+
+.topBox {
+    width: 100%;
+    height: 30vh;
+    position: relative;
+    margin-bottom: 5rem;
+}
+
+.wave2 {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: -5vw;
+    left: 0;
+    aspect-ratio: 17 / 1;
+    background-image: url(../image/SVG/top_underwave.svg);
+    background-size: 100%;
+    background-repeat: repeat-x;
+    background-position: 0;
+    animation: wave-anim 60s linear infinite;
+}
+
+.momongaShape1 {
+    width: 15%;
+    position: absolute;
+    left: 7%;
+    top: 5%;
+    z-index: 100;
+}
+
+.catchCopy1 {
+    width: 80%;
+    position: absolute;
+    left: 7%;
+    top: 5%;
+    z-index: 200;
+}
+
+/* -------------------top end--------------------- */
+
+.aboutus {
+    width: 100%;
+    height: auto;
+}
+
+.aboutus .aboutusBox {
+    width: 100%;
+    height: 80vh;
+    background: url(../image/SVG/green_silhouette.svg) no-repeat center center/contain;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.aboutusBox .aboutusText {
+    width: 35%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2em;
+}
+
+.aboutusBox h3 {
+    width: 100%;
+    font-size: clamp(16px, 1.5rem, 32px);
+    text-align: center;
+    /* white-space: nowrap; */
+}
+
+.aboutusBox .p1 {
+    width: 100%;
+    font-size: clamp(14px, 1rem, 24px);
+    text-align: center;
+    /* white-space: nowrap; */
+}
+
+.aboutusBox .p2 {
+    width: 100%;
+    font-size: clamp(16px, 1.2rem, 28px);
+}
+
+/* -----------------aboutus end----------------- */
+
+.menu,
+.menu.menuWrapper {
+    width: 100%;
+    height: auto;
+}
+
+.menu .menuWrapper .menuBox {
+    width: 70%;
+    height: auto;
+    margin: 2rem auto;
+    display: flex;
+    gap: 1rem;
+}
+
+.menuWrapper .menuBox:nth-child(2) {
+    flex-direction: row-reverse;
+    text-align: end;
+}
+
+.menuBox .menuImage img {
+    border-radius: 10%;
+    border: 7px solid #E86F5B;
+}
+
+.menuBox .menuImage,
+.menuBox .menuText {
+    width: 50%;
+}
+
+.menuBox .menuText {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    gap: 1rem;
+}
+
+.menuBox .menuText h3 {
+    color: #F45998;
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.menuBox .menuText p {
+    font-family: 'Mplus 1p';
+    font-size: 1.2rem;
+    font-weight: 500;
+    padding-right: 20%;
+}
+
+.menuBox .menuText .macaronSet {
+    padding-right: 0;
+    padding-left: 20%;
+}
+
+.othermenu {
+    width: 100%;
+    height: 100%;
+}
+
+.othermenu .purpleWrap {
+    width: 100%;
+    height: 90vh;
+    background: url(../image/SVG/purple_shape.svg) no-repeat center center/contain;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.bananaImage {
+    width: 15%;
+    position: absolute;
+    top: 10%;
+    left: 60%;
+}
+
+.trifleImage {
+    width: 20%;
+    position: absolute;
+    top: 55%;
+    left: 15%;
+}
+
+.quicheImage {
+    width: 25%;
+    position: absolute;
+    top: 65%;
+    left: 65%;
+}
+
+.bananaImage img,
+.trifleImage img,
+.quicheImage img {
+    border: 6px solid rgba(244, 87, 150, 0.5);
+    border-radius: 50%;
+}
+
+.purpleWrap .purpleList {
+    width: 40%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.purpleList h4 {
+    font-size: 2rem;
+    width: 100%;
+    text-align: center;
+}
+
+.purpleList ul {
+    font-size: 1.2rem;
+    width: 100%;
+}
+
+.purpleList ul li {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+.macaronLogo {
+    width: 120px;
+    height: 100%;
+    margin: 3rem auto;
+}
+
+/* -------------------menu end--------------------- */
+
+
+.animals {
+    width: 100%;
+    height: auto;
+}
+
+.animalsContainer {
+    width: 100%;
+    height: auto;
+}
+
+.animalsWrap {
+    width: 100%;
+    height: 100%;
+    background-color: #F4BAD2;
+}
+
+.animalsWrapper {
+    width: 70%;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+}
+
+.animalsBox1 {
+    width: 40%;
+    height: 90%;
+}
+
+.animalsBox2 {
+    width: 50%;
+    height: 100%;
+}
+
+.animalsBox2 .momonga2 {
+    width: 100%;
+    height: 60%;
+}
+
+.animalsBox2 .animalsText {
+    width: 100%;
+    height: 32%;
+    margin: 1rem 0 0;
+    text-align: center;
+    font-family: 'Mplus 1p';
+}
+
+.animalsText h6 {
+    margin: 1rem auto 0.8rem;
+    font-size: 1.2rem;
+    white-space: nowrap;
+}
+
+#animalsInfo {
+    text-align: start;
+}
+
+.animalsCopyWrap {
+    width: 100%;
+    height: 20vh;
+    position: relative;
+}
+
+.momongaShape2 {
+    width: 15%;
+    height: auto;
+    position: absolute;
+    left: 7%;
+    top: 5%;
+    z-index: 1;
+}
+
+.catchCopy2 {
+    width: 80%;
+    position: absolute;
+    left: 7%;
+    top: 5%;
+    z-index: 2;
+}
+
+/* -------------------animals end--------------------- */
+
+.swiper-slide img {
+    width: 100%;
+    height: auto;
+}
+
+.swiper {
+    width: 60%;
+    aspect-ratio: 1/1;
+}
+
+.swiper img {
+    width: 80%;
+    height: 80%;
+    display: block;
+    margin: 1rem auto;
+    border: 10px solid #babaf2;
+    border-radius: 5rem;
+}
+
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-side img {
+    object-fit: contain;
+    object-position: center;
+}
+
+/* 矢印画像の高さと幅 */
+.swiper-button-prev,
+.swiper-button-next {
+    height: 50px;
+    width: 50px;
+}
+
+/* 矢印を消して画像に変更する */
+.gallery .swiper-button-prev::after,
+.gallery .swiper-button-next::after {
+    content: "";
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 50px;
+    width: 50px;
+    margin: auto;
+}
+
+/* 前に戻る矢印の画像パス */
+.swiper-button-prev::after {
+    background-image: url(../image/SVG/triangle_left.svg);
+}
+
+/* 次に進む矢印の画像パス */
+.swiper-button-next::after {
+    background-image: url(../image/SVG/triangle_right.svg);
+}
+
+.gallery .swiper-pagination-bullet {
+    width: 16px;
+    height: 16px;
+    background-color: #BBBBF2;
+}
+
+/* -----------------gallery end------------------ */
+
+.accessText {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.accessMap iframe {
+    width: 100%;
+    height: 100%;
+}
+
+.accessMap {
+    width: 70%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    margin: 3rem auto;
+    border: 7px solid #E86F5B;
+    border-radius: 3rem;
+    overflow: hidden;
+}
+
+.accessText h5 {
+    font-size: 2rem;
+    height: fit-content;
+}
+
+/* ----------------access end-------------------- */
+
+.snsBox {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin: 4rem 2rem 6rem;
+}
+
+.snsBox .tiktok-embed {
+    margin: 0 auto;
+}
+
+.snsX,
+.snsTiktok {
+    border: 8px solid #BBEFBE;
+    border-radius: 3rem;
+    overflow: hidden;
+}
+
+/* ------------------sns end---------------------- */
+
+footer {
+    position: relative;
+}
+
+.footerWave {
+    /* margin-bottom: -0.2%; */
+    width: 100%;
+    /* height: auto; */
+    position: absolute;
+    top: -5vw;
+    left: 0;
+    aspect-ratio: 17 / 1;
+    background-image: url(../image/SVG/footer_wave.svg);
+    background-size: 100%;
+    background-repeat: repeat-x;
+    background-position: 0;
+    animation: wave-anim 60s linear infinite;
+}
+
+.footerWrap {
+    background-color: #EDCCBC;
+    width: 100%;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.footerImage {
+    aspect-ratio: 1/1;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footerImage img {
+    width: 80%;
+    height: 80%;
+}
+
+/* -------------------footer end------------------ */
