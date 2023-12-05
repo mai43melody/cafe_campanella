@@ -51,6 +51,10 @@ h2 {
 header {
     width: 100%;
     background-color: #EDCCBC;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 500;
 }
 
 .headerWrap {
@@ -94,13 +98,14 @@ header {
     width: 100%;
     height: auto;
     position: relative;
+    margin-top: 12vh;
 }
 
 .wave1 {
     position: absolute;
-    top: 0;
+    bottom: 0;
     left: 0;
-    z-index: 100;
+    transform: translateY(99%);
     width: 100%;
     aspect-ratio: 17.5 / 1;
     background-image: url(../image/SVG/header_underwave.svg);
@@ -170,6 +175,20 @@ header {
 }
 
 /* -------------------top end--------------------- */
+
+.news{
+    width: 100%;
+    height: auto;
+}
+
+.news .newsBox{
+    width: 70%;
+    margin: 0 auto;
+    border: 10px solid #BBBBF2;
+    border-radius: 5rem;
+    overflow: hidden;
+}
+
 
 .aboutus {
     width: 100%;

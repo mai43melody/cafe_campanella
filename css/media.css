@@ -246,7 +246,11 @@
         object-fit: cover;
     }
 
-
+    .news .newsBox{
+        width: 90%;
+        border: 7px solid #BBBBF2;
+        border-radius: 2rem;
+    }
 
     .aboutusBox .aboutusText {
         width: 60%;
