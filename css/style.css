@@ -57,12 +57,13 @@ body {
 
 .loading_bg .loadFlower {
     width: 30%;
+    aspect-ratio: 1/1;
     position: absolute;
     inset: 0;
     margin: auto;
-    transform: translate(-50%, -50%);
+    /* transform: translate(-50%, -50%); */
     z-index: 1;
-    animation: rotate-right 5s linear infinite;
+    animation: rotate-right 10s linear infinite;
 }
 
 /* JSで付与するクラス。これによってクラスloading_bgが指定されている要素が消える */
@@ -189,7 +190,7 @@ header {
     width: 100%;
     height: auto;
     position: relative;
-    margin-top: 15vh;
+    margin-top: 12vh;
 }
 
 .topImage {
